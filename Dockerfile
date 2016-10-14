@@ -18,10 +18,9 @@ RUN apt-get update && \
 
    
 # And the python-specific tools
-RUN pip install theano jupyter
-
-# And the python3-specific tools
-RUN pip3 install theano jupyter
+RUN pip install theano jupyter && \
+    pip3 install theano jupyter && \
+    ipython2 kernel install
 
 # And the startup script
 COPY . /
