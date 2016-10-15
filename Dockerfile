@@ -6,6 +6,9 @@ LABEL Description="Jupyter server setup for ECBM E4040 Neural Networks" Version=
 # Update our cache first
 RUN apt-get update && \
 
+    # Install packages needed for a sane linux system
+    apt-get install -y git && \
+
     # Don't install broken Pip
     apt-get install -y python-pip=8.1.1-2 python3-pip=8.1.1-2 python-pip-whl=8.1.1-2 && \
 
@@ -15,7 +18,6 @@ RUN apt-get update && \
         python-pandas python-matplotlib python-sklearn \
         python3-pandas python3-matplotlib python3-sklearn \
         texlive-latex-extra texlive-fonts-recommended texlive-generic-recommended pandoc
-
    
 # And the python-specific tools
 RUN pip install theano jupyter && \
