@@ -20,8 +20,8 @@ RUN apt-get update && \
         texlive-latex-extra texlive-fonts-recommended texlive-generic-recommended pandoc
    
 # And the python-specific tools
-RUN pip install theano jupyter librosa && \
-    pip3 install theano jupyter librosa && \
+RUN pip install theano jupyter librosa mir_eval && \
+    pip3 install theano jupyter librosa mir_eval && \
     ipython2 kernel install
 
 # And the startup script
