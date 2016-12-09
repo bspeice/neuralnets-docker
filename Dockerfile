@@ -15,8 +15,8 @@ RUN apt-get update && \
     # Install the Scipy stuff we need
     apt-get install -y  \
         python3 libpython3-dev \
-        python-pandas python-matplotlib python-sklearn \
-        python3-pandas python3-matplotlib python3-sklearn \
+        python-pandas python-matplotlib python-sklearn python-pyodbc \
+        python3-pandas python3-matplotlib python3-sklearn python3-pyodbc \
         texlive-latex-extra texlive-fonts-recommended texlive-generic-recommended pandoc
    
 # And the python-specific tools
